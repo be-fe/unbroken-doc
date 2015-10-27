@@ -10,5 +10,5 @@ doc.init('example-two', {
     ]
 });
 
-gulp.task('my-doc', doc.doc);
-gulp.task('my-validate', doc.validate);
+gulp.task('my-doc', doc.tasks.doc);
+gulp.task('my-validate', doc.tasks.validate);

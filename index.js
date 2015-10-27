@@ -1,5 +1,4 @@
 var chokidar = require('chokidar');
-var gulp = require('gulp');
 var npath = require('path');
 var fs = require('fs');
 var md5 = require('md5');
@@ -11,24 +10,24 @@ var config = require('./config');
     var taskDefs = {};
 
     var rgxRawMarker = new RegExp(
-            '@@\\{'
-            + '([^{}]*)'
+            '@@\\{'         // 预生成标记的起始token
+            + '([^{}]*)'    // 在 @@{ /* 不应该包含任何的 { 和 } */ } 中
             + '\\}',
             'g'
         ),
         rgxExistingMarker = new RegExp(
-            '@\\{\\{'
+            '@\\{\\{'                   // 已生成标记的起始token为 @{{
             + '\\s*'
-            + '(?:#(\\d+))?'
+            + '(?:#(\\d+))?'            // #DDD 为标记的权重, 目前没有作用
             + '\\s*'
-            + '\\[([^\\[\\]]*)\\]'
-            + '\\{([^{}]+)\\}'
-            + '[^]*?'
-            + '\\}\\}@',
+            + '\\[([^\\[\\]]*)\\]'      // 前面是 [ /* 标记名称 */ ]
+            + '\\{([^{}]+)\\}'          // 后面是 { /* 标记的Key */ }
+            + '[^]*?'                   // 标记中, 可以包含简单的内容
+            + '\\}\\}@',                // 结束 token
             'g'
         );
 
-    var ensurePath = function(path) {
+    var ensurePath = function (path) {
         if (!fs.existsSync(path)) {
             ensurePath(npath.dirname(path));
 
@@ -72,6 +71,9 @@ var config = require('./config');
         });
     };
 
+    /*@{{
+[ doc 项目监控处理程序 ]{_unbroken_doc_0e9af2478_}
+}}@*/
     taskDefs.doc = function () {
         var allTypeMap = {}, allTypes = [];
 
@@ -85,6 +87,12 @@ var config = require('./config');
 
         var fileQueue = {};
 
+        /*@{{
+         [ 隔时批量索引项目内容 ]{_unbroken_doc_0e5174551_}
+
+         在 chokidar 获知文件更改的时候, 不是立即处理, 而是放在一个队列里, 隔时批量处理, 避免多次反复操作.
+
+         }}@*/
         setInterval(function () {
             var docIndex;
             for (var path in fileQueue) {
@@ -141,8 +149,11 @@ var config = require('./config');
                 }
             }
             fileQueue = {};
-        }, 800);
+        }, 200);
 
+        /*@{{
+         [ 加入批处理队列 ]{_unbroken_doc_da5379fc3_}
+         }}@*/
         var processFile = function (path, extname) {
             path = path.split('\\').join('/');
             var logic = config.fileTypes[extname.substr(1)];
@@ -151,6 +162,9 @@ var config = require('./config');
             }
         };
 
+        /*@{{
+         [ 监视文件更改 ]{_unbroken_doc_d5b774c32_}
+         }}@*/
         var watcher = createWatcher()
             .on('add', function (path) {
                 // 获取所有文件类型
@@ -177,11 +191,9 @@ var config = require('./config');
 
 
     var validators = {
-        /**
-         * exists or not?
-         * @param files
-         * @param docIndex
-         */
+        /*@{{
+         [ 校对cache中的文件路径 ]{_unbroken_doc_236ad77f4_}
+         }}@*/
         validateFiles: function (files, docIndex) {
             var newFiles = {};
             for (var path in files) {
@@ -194,10 +206,9 @@ var config = require('./config');
             docIndex.files = newFiles;
             debounceSaveDocIndex();
         },
-        /**
-         * exists or not? warnings instead of direct removals
-         * @param keys
-         */
+        /*@{{
+         [ 校对cache中的标记keys ]{_unbroken_doc_4fb26dc65_}
+         }}@*/
         validateKeys: function (keys, docIndex) {
             var tmpKeys = {};
             var watcher = createWatcher()
@@ -220,7 +231,7 @@ var config = require('./config');
 
                     // 检测在index文件中定义, 但在项目内容中未找到的标记.
                     // 做警示提醒, 不做自动操作
-                    _.each(tmpKeys, function(content, key) {
+                    _.each(tmpKeys, function (content, key) {
                         if (!keys[key]) {
                             keys[key] = content;
 
@@ -231,7 +242,7 @@ var config = require('./config');
 
                     // 检测在项目内容中找到, 但没在index文件中定义的标记.
                     // 如果有, 则自动添加到index 文件
-                    _.each(keys, function(content, key){
+                    _.each(keys, function (content, key) {
                         if (!tmpKeys[key]) {
                             missingKeys[key] = content;
                             console.log('WARNING: %s (%s) from %s is missing.', key, content.name, content.path);
@@ -243,6 +254,9 @@ var config = require('./config');
         }
     };
 
+    /*@{{
+     [ validate 校对任务 ]{_unbroken_doc_7f7ba06d6_}
+     }}@*/
     taskDefs.validate = function () {
 
         if (fs.existsSync(config.docIndexFilePath)) {
@@ -260,13 +274,10 @@ var config = require('./config');
     };
 
     module.exports = {
-        setup: function(projectKey, configOrFunc) {
-            this.init(projectKey, configOrFunc);
-
-            gulp.task('doc', taskDefs.doc);
-            gulp.task('validate', taskDefs.validate);
-        },
-        init: function(projectKey, configOrFunc) {
+        /*@{{
+         [ unbroken-doc 初始化 ]{_unbroken_doc_c067c8957_}
+         }}@*/
+        init: function (projectKey, configOrFunc) {
             config.projectKey = projectKey || 'default';
 
             if (typeof configOrFunc == 'function') {
@@ -277,7 +288,8 @@ var config = require('./config');
 
             this.applyConfig();
         },
-        applyConfig: function() {
+
+        applyConfig: function () {
             config.docCacheFolderPath += '/';
             config.projectKey = config.projectKey.replace(/\W+/g, '_');
             config.ignores = config.ignores.concat(config.addIgnores);
@@ -285,7 +297,6 @@ var config = require('./config');
 
             ensurePath(config.docCacheFolderPath);
         },
-        doc: taskDefs.doc,
-        validate: taskDefs.validate
+        tasks: taskDefs
     }
 })();

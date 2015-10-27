@@ -1,7 +1,7 @@
 {
   "name": "unbroken-doc",
-  "version": "0.1.0",
-  "description": "A method to create steady documentation for your project.",
+  "version": "0.2.0",
+  "description": "A solution to create steady documentation for your project.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -25,8 +25,10 @@
   "homepage": "https://github.com/be-fe/unbroken-doc#readme",
   "dependencies": {
     "chokidar": "^1.2.0",
-    "gulp": "^3.9.0",
     "lodash": "^3.10.1",
     "md5": "^2.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0"
   }
 }

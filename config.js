@@ -1,3 +1,6 @@
+/*@{{
+[ 配置文件 ]{_unbroken_doc_e8ecfc779_}
+}}@*/
 module.exports = {
     "projectKey": "default",
     commentSyntax: {
@@ -56,7 +59,7 @@ module.exports = {
     ignores: [
         /[\/\\]\./,
         /^\../,
-        /[\/\\]node_modules[\/\\]/,
+        /([\/\\]|^)node_modules[\/\\]/,
         /[\/\\]vendor[\/\\]/,
         /\.(mp4|avi|mkv|rm|rmvb|mp3|wav|xls|doc|xlsx|docx|class|png|jpg|gif|rar|eot|svg|ttf|woff|woff2|swf|db|jar|iml|jpeg)$/i,
     ],

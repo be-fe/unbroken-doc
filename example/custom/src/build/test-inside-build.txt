@@ -1,1 +1,3 @@
-@@{ should not be detected }
+@{{
+[ should not be detected ]{_unbroken_doc_46415df62_}
+}}@
