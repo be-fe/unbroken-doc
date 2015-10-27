@@ -1,3 +1,3 @@
 var doc = require('../../index');
 
-doc.setup();
+doc.setup('example-one');

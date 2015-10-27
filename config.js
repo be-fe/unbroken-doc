@@ -1,4 +1,5 @@
 module.exports = {
+    "projectKey": "default",
     commentSyntax: {
         none: {start: '', end: ''},
         xml: {start: '<!--', end: '-->'},
@@ -54,7 +55,7 @@ module.exports = {
     docCacheFolderPath: './.doc_cache/',
     ignores: [
         /[\/\\]\./,
-        /^\./,
+        /^\../,
         /[\/\\]node_modules[\/\\]/,
         /[\/\\]vendor[\/\\]/,
         /\.(mp4|avi|mkv|rm|rmvb|mp3|wav|xls|doc|xlsx|docx|class|png|jpg|gif|rar|eot|svg|ttf|woff|woff2|swf|db|jar|iml|jpeg)$/i,

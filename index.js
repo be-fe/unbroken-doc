@@ -51,7 +51,6 @@ var config = require('./config');
         } else {
             if (!_docIndex) {
                 _docIndex = {
-                    projectKey: 'default',
                     seq: 0,
                     keys: {},
                     files: {}
@@ -81,7 +80,7 @@ var config = require('./config');
 
             docIndex.seq++;
             debounceSaveDocIndex();
-            return '_' + docIndex.projectKey + '_' + md5(Math.random()).substr(0, 8) + docIndex.seq.toString(36) + '_';
+            return '_' + config.projectKey + '_' + md5(Math.random()).substr(0, 8) + docIndex.seq.toString(36) + '_';
         };
 
         var fileQueue = {};
@@ -261,13 +260,15 @@ var config = require('./config');
     };
 
     module.exports = {
-        setup: function(configOrFunc) {
-            this.init(configOrFunc);
+        setup: function(projectKey, configOrFunc) {
+            this.init(projectKey, configOrFunc);
 
             gulp.task('doc', taskDefs.doc);
             gulp.task('validate', taskDefs.validate);
         },
-        init: function(configOrFunc) {
+        init: function(projectKey, configOrFunc) {
+            config.projectKey = projectKey || 'default';
+
             if (typeof configOrFunc == 'function') {
                 config = configOrFunc(config);
             } else if (configOrFunc) {
@@ -277,6 +278,8 @@ var config = require('./config');
             this.applyConfig();
         },
         applyConfig: function() {
+            config.docCacheFolderPath += '/';
+            config.projectKey = config.projectKey.replace(/\W+/g, '_');
             config.ignores = config.ignores.concat(config.addIgnores);
             config.docIndexFilePath = config.docCacheFolderPath + 'unbroken-doc-index.json';
 

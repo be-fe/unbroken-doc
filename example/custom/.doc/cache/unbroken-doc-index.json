@@ -1,0 +1,14 @@
+{
+  "seq": 0,
+  "keys": {
+    "_example_two_a6438e731_": {
+      "name": " marker ",
+      "path": "src/test.txt"
+    }
+  },
+  "files": {
+    "src/test.txt": {
+      "atime": 1445937717065
+    }
+  }
+}

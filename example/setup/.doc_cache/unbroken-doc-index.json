@@ -1,6 +1,5 @@
 {
-  "projectKey": "default",
-  "seq": 2,
+  "seq": 5,
   "keys": {
     "_default_2d34ac3f1_": {
       "name": " marker 1 ",
@@ -9,20 +8,32 @@
     "_default_17537aea2_": {
       "name": " lalals ",
       "path": ".doc_cache/test.js"
+    },
+    "_default_ea4855be3_": {
+      "name": " hello ",
+      "path": "text.txt"
+    },
+    "_example-one_8281bae74_": {
+      "name": " new marker ",
+      "path": "text.txt"
+    },
+    "_example_one_e46278755_": {
+      "name": " marker 2 ",
+      "path": "text.txt"
     }
   },
   "files": {
     "gulpfile.js": {
-      "atime": 1445936547618
+      "atime": 1445937364876
     },
     "text.txt": {
-      "atime": 1445936547621
+      "atime": 1445937380099
     },
     ".doc_cache/unbroken-doc-index.json": {
-      "atime": 1445936547625
+      "atime": 1445937130767
     },
     ".doc_cache/test.js": {
-      "atime": 1445936578861
+      "atime": 1445937056794
     }
   }
 }

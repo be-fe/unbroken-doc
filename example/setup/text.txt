@@ -4,3 +4,11 @@
 }}@
 
 why not detected?
+
+@{{
+[ hello ]{_default_ea4855be3_}
+}}@
+
+@{{
+[ marker 2 ]{_example_one_e46278755_}
+}}@
