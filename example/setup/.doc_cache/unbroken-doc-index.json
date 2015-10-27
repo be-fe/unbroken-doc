@@ -1,0 +1,28 @@
+{
+  "projectKey": "default",
+  "seq": 2,
+  "keys": {
+    "_default_2d34ac3f1_": {
+      "name": " marker 1 ",
+      "path": "text.txt"
+    },
+    "_default_17537aea2_": {
+      "name": " lalals ",
+      "path": ".doc_cache/test.js"
+    }
+  },
+  "files": {
+    "gulpfile.js": {
+      "atime": 1445936547618
+    },
+    "text.txt": {
+      "atime": 1445936547621
+    },
+    ".doc_cache/unbroken-doc-index.json": {
+      "atime": 1445936547625
+    },
+    ".doc_cache/test.js": {
+      "atime": 1445936578861
+    }
+  }
+}

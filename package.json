@@ -1,0 +1,32 @@
+{
+  "name": "unbroken-doc",
+  "version": "0.1.0",
+  "description": "A method to create steady documentation for your project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/be-fe/unbroken-doc.git"
+  },
+  "keywords": [
+    "doc",
+    "documentation",
+    "steady",
+    "maintenable",
+    "easy"
+  ],
+  "author": "jspop",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/be-fe/unbroken-doc/issues"
+  },
+  "homepage": "https://github.com/be-fe/unbroken-doc#readme",
+  "dependencies": {
+    "chokidar": "^1.2.0",
+    "gulp": "^3.9.0",
+    "lodash": "^3.10.1",
+    "md5": "^2.0.0"
+  }
+}
