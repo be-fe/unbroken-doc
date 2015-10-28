@@ -7,6 +7,8 @@ doc.init('example-two', {
     docCacheFolderPath: './.doc/cache',
     addIgnores: [
         /^src[\\\/]build/,
+        /^README\.md/,
+        /^README_cn\.md/,
     ]
 });
 

@@ -60,7 +60,9 @@ module.exports = {
         /[\/\\]\./,
         /^\../,
         /([\/\\]|^)node_modules[\/\\]/,
-        /[\/\\]vendor[\/\\]/,
+        /([\/\\]|^)bower_modules[\/\\]/,
+        /([\/\\]|^)vendor[\/\\]/,
+        /([\/\\]|^)build[\/\\]/,
         /\.(mp4|avi|mkv|rm|rmvb|mp3|wav|xls|doc|xlsx|docx|class|png|jpg|gif|rar|eot|svg|ttf|woff|woff2|swf|db|jar|iml|jpeg)$/i,
     ],
     addIgnores: [
