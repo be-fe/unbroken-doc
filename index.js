@@ -72,8 +72,8 @@ var config = require('./config');
     };
 
     /*@{{
-[ doc 项目监控处理程序 ]{_unbroken_doc_0e9af2478_}
-}}@*/
+     [ doc 项目监控处理程序 ]{_unbroken_doc_0e9af2478_}
+     }}@*/
     taskDefs.doc = function () {
         var allTypeMap = {}, allTypes = [];
 
@@ -116,7 +116,7 @@ var config = require('./config');
                     //console.log('stat', stat, docIndex.files[path].atime);
 
                     // 使用 stat.atime 来检测文件是否需要重新索引
-                    if (!docIndex.files[path] || stat.atime.getTime() > docIndex.files[path].atime) {
+                    if (!docIndex.files || !docIndex.files[path] || stat.atime.getTime() > docIndex.files[path].atime) {
                         var fileInfo = docIndex.files[path] = docIndex.files[path] || {atime: stat.atime.getTime()};
 
                         var content = fs.readFileSync(path).toString();
