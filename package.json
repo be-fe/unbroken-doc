@@ -1,6 +1,6 @@
 {
   "name": "unbroken-doc",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "A solution to create steady documentation for your project.",
   "main": "index.js",
   "scripts": {
