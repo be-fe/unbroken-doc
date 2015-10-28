@@ -1,5 +1,5 @@
 {
-  "seq": 10,
+  "seq": 11,
   "keys": {
     "_example_two_a6438e731_": {
       "name": " marker ",
@@ -44,23 +44,27 @@
     "_unbroken_doc_385f148fa_": {
       "name": " 程序运作逻辑 ",
       "path": "doc/logic.md"
+    },
+    "_unbroken_doc_7c7e98ecb_": {
+      "name": " marker2 ",
+      "path": "example/custom/src/test.txt"
     }
   },
   "files": {
     "README.md": {
-      "atime": 1445997649286
+      "atime": 1446003350736
     },
     "config.js": {
-      "atime": 1445997430712
+      "atime": 1446003464707
     },
     "gulpfile.js": {
-      "atime": 1445997430712
+      "atime": 1446003464707
     },
     "index.js": {
-      "atime": 1445997430712
+      "atime": 1446003464708
     },
     "package.json": {
-      "atime": 1445997565007
+      "atime": 1446003657798
     },
     "doc/logic.md": {
       "atime": 1445997560595
@@ -69,7 +73,7 @@
       "atime": 1445997430714
     },
     "example/custom/src/test.txt": {
-      "atime": 1445952830191
+      "atime": 1446003461459
     }
   }
 }

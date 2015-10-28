@@ -27,26 +27,32 @@ There are two in this plugin at the moment:
 Therefore, you could have something like this:
 
 ```
+var gulp = require('gulp');
 var unbrokenDoc = require('unbroken-doc');
 
 unbrokenDoc.init('my-custom-project', OPTIONS);
+
 gulp.task('doc', unbrokenDoc.tasks.doc);
 gulp.task('validate', unbrokenDoc.tasks.validate);
 
 // which defines the tasks as below
-# gulp my-doc
-# gulp my-validate
+# gulp doc
+# gulp validate
 ```
+
+## unbrokenDoc.init( projectKey, options )
+
+`projectKey` is the most important information in the setting, it will determine how your marker is generated.
+
+For more information about `options` see below.
 
 # Options of config
 
-OPTIONS is the config object, you can refer to the default config object below:
+OPTIONS is the config object, if nothing is passed into `.init()`, the default object is used.
+You can refer to the default config object below to get more idea:
 
 ```
-{
-    // the key of the project, will be used to generate the unique marker key
-    "projectKey": "default",
-    
+{   
     // the comment syntax, so that the marker can be error-free embeded on the content
     commentSyntax: {
         none: {start: '', end: ''},
@@ -112,7 +118,7 @@ OPTIONS is the config object, you can refer to the default config object below:
     ignores: [
         /[\/\\]\./,
         /^\../,
-        /[\/\\]node_modules[\/\\]/,
+        /([\/\\]|^)node_modules[\/\\]/,
         /[\/\\]vendor[\/\\]/,
         /\.(mp4|avi|mkv|rm|rmvb|mp3|wav|xls|doc|xlsx|docx|class|png|jpg|gif|rar|eot|svg|ttf|woff|woff2|swf|db|jar|iml|jpeg)$/i,
     ],

@@ -278,7 +278,11 @@ var config = require('./config');
          [ unbroken-doc 初始化 ]{_unbroken_doc_c067c8957_}
          }}@*/
         init: function (projectKey, configOrFunc) {
-            config.projectKey = projectKey || 'default';
+            if (!projectKey) {
+                throw Error('You should specify a proper project key as it is the key element of your markers.' +
+                '\n on .init() method.');
+            }
+            config.projectKey = projectKey;
 
             if (typeof configOrFunc == 'function') {
                 config = configOrFunc(config);
