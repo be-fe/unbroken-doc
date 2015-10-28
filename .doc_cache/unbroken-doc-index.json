@@ -1,5 +1,5 @@
 {
-  "seq": 9,
+  "seq": 10,
   "keys": {
     "_example_two_a6438e731_": {
       "name": " marker ",
@@ -40,29 +40,33 @@
     "_unbroken_doc_e8ecfc779_": {
       "name": " 配置文件 ",
       "path": "config.js"
+    },
+    "_unbroken_doc_385f148fa_": {
+      "name": " 程序运作逻辑 ",
+      "path": "doc/logic.md"
     }
   },
   "files": {
     "README.md": {
-      "atime": 1445952830188
+      "atime": 1445997649286
     },
     "config.js": {
-      "atime": 1445952830190
+      "atime": 1445997430712
     },
     "gulpfile.js": {
-      "atime": 1445952830190
+      "atime": 1445997430712
     },
     "index.js": {
-      "atime": 1445952830191
+      "atime": 1445997430712
     },
     "package.json": {
-      "atime": 1445952830191
+      "atime": 1445997565007
     },
     "doc/logic.md": {
-      "atime": 1445952830191
+      "atime": 1445997560595
     },
     "example/custom/gulpfile.js": {
-      "atime": 1445952830191
+      "atime": 1445997430714
     },
     "example/custom/src/test.txt": {
       "atime": 1445952830191

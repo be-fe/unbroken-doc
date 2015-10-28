@@ -1,4 +1,7 @@
-程序运作逻辑:
+@{{
+[ 程序运作逻辑 ]{_unbroken_doc_385f148fa_}
+
+}}@
 
 * 首先, 使用模块的 init 方法进行 [ unbroken-doc 初始化 ]{_unbroken_doc_c067c8957_}
     * 初始化的默认配置文件 [ 配置文件 ]{_unbroken_doc_e8ecfc779_}
