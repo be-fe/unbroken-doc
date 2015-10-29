@@ -1,5 +1,5 @@
 {
-  "seq": 0,
+  "seq": 2,
   "keys": {
     "_unbroken_doc_e8ecfc779_": {
       "name": " 配置文件 ",
@@ -44,29 +44,37 @@
     "_example_two_a6438e731_": {
       "name": " marker ",
       "path": "example/custom/src/test.txt"
+    },
+    "_unbroken_doc_7ae3181a1_": {
+      "name": " lalala ",
+      "path": "doc/logic.md"
+    },
+    "_unbroken_doc_350aee372_": {
+      "name": " lalal ",
+      "path": "doc/logic.md"
     }
   },
   "files": {
     "config.js": {
-      "atime": 1446086695250
+      "atime": 1446087260411
     },
     "gulpfile.js": {
-      "atime": 1446086695251
+      "atime": 1446087260412
     },
     "index.js": {
-      "atime": 1446086695251
+      "atime": 1446087260412
     },
     "package.json": {
       "atime": 1446086351974
     },
     "doc/logic.md": {
-      "atime": 1446086695252
+      "atime": 1446087371996
     },
     "example/custom/gulpfile.js": {
       "atime": 1446086351974
     },
     "example/custom/src/test.txt": {
-      "atime": 1446086695252
+      "atime": 1446087260414
     }
   }
 }

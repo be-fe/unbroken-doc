@@ -19,5 +19,3 @@ gulp validate 任务逻辑:
 
 * @[ 校对cache中的文件路径 ]{_unbroken_doc_236ad77f4_}
 * @[ 校对cache中的标记keys ]{_unbroken_doc_4fb26dc65_}
-
-
