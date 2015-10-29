@@ -72,7 +72,7 @@ var config = require('./config');
     };
 
     /*@{{
-     [ doc 项目监控处理程序 ]{_unbroken_doc_0e9af2478_}
+     @[ doc 项目监控处理程序 ]{_unbroken_doc_0e9af2478_}
      }}@*/
     taskDefs.doc = function () {
         var allTypeMap = {}, allTypes = [];
@@ -88,7 +88,7 @@ var config = require('./config');
         var fileQueue = {};
 
         /*@{{
-         [ 隔时批量索引项目内容 ]{_unbroken_doc_0e5174551_}
+         @[ 隔时批量索引项目内容 ]{_unbroken_doc_0e5174551_}
 
          在 chokidar 获知文件更改的时候, 不是立即处理, 而是放在一个队列里, 隔时批量处理, 避免多次反复操作.
 
@@ -152,7 +152,7 @@ var config = require('./config');
         }, 200);
 
         /*@{{
-         [ 加入批处理队列 ]{_unbroken_doc_da5379fc3_}
+         @[ 加入批处理队列 ]{_unbroken_doc_da5379fc3_}
          }}@*/
         var processFile = function (path, extname) {
             path = path.split('\\').join('/');
@@ -163,7 +163,7 @@ var config = require('./config');
         };
 
         /*@{{
-         [ 监视文件更改 ]{_unbroken_doc_d5b774c32_}
+         @[ 监视文件更改 ]{_unbroken_doc_d5b774c32_}
          }}@*/
         var watcher = createWatcher()
             .on('add', function (path) {
@@ -192,7 +192,7 @@ var config = require('./config');
 
     var validators = {
         /*@{{
-         [ 校对cache中的文件路径 ]{_unbroken_doc_236ad77f4_}
+         @[ 校对cache中的文件路径 ]{_unbroken_doc_236ad77f4_}
          }}@*/
         validateFiles: function (files, docIndex) {
             var newFiles = {};
@@ -207,7 +207,7 @@ var config = require('./config');
             debounceSaveDocIndex();
         },
         /*@{{
-         [ 校对cache中的标记keys ]{_unbroken_doc_4fb26dc65_}
+         @[ 校对cache中的标记keys ]{_unbroken_doc_4fb26dc65_}
          }}@*/
         validateKeys: function (keys, docIndex) {
             var tmpKeys = {};
@@ -255,7 +255,7 @@ var config = require('./config');
     };
 
     /*@{{
-     [ validate 校对任务 ]{_unbroken_doc_7f7ba06d6_}
+     @[ validate 校对任务 ]{_unbroken_doc_7f7ba06d6_}
      }}@*/
     taskDefs.validate = function () {
 
@@ -275,7 +275,7 @@ var config = require('./config');
 
     module.exports = {
         /*@{{
-         [ unbroken-doc 初始化 ]{_unbroken_doc_c067c8957_}
+         @[ unbroken-doc 初始化 ]{_unbroken_doc_c067c8957_}
          }}@*/
         init: function (projectKey, configOrFunc) {
             if (!projectKey) {

@@ -1,0 +1,72 @@
+{
+  "seq": 0,
+  "keys": {
+    "_unbroken_doc_e8ecfc779_": {
+      "name": " 配置文件 ",
+      "path": "config.js"
+    },
+    "_unbroken_doc_0e9af2478_": {
+      "name": " doc 项目监控处理程序 ",
+      "path": "index.js"
+    },
+    "_unbroken_doc_0e5174551_": {
+      "name": " 隔时批量索引项目内容 ",
+      "path": "index.js"
+    },
+    "_unbroken_doc_da5379fc3_": {
+      "name": " 加入批处理队列 ",
+      "path": "index.js"
+    },
+    "_unbroken_doc_d5b774c32_": {
+      "name": " 监视文件更改 ",
+      "path": "index.js"
+    },
+    "_unbroken_doc_236ad77f4_": {
+      "name": " 校对cache中的文件路径 ",
+      "path": "index.js"
+    },
+    "_unbroken_doc_4fb26dc65_": {
+      "name": " 校对cache中的标记keys ",
+      "path": "index.js"
+    },
+    "_unbroken_doc_7f7ba06d6_": {
+      "name": " validate 校对任务 ",
+      "path": "index.js"
+    },
+    "_unbroken_doc_c067c8957_": {
+      "name": " unbroken-doc 初始化 ",
+      "path": "index.js"
+    },
+    "_unbroken_doc_385f148fa_": {
+      "name": " 程序运作逻辑 ",
+      "path": "doc/logic.md"
+    },
+    "_example_two_a6438e731_": {
+      "name": " marker ",
+      "path": "example/custom/src/test.txt"
+    }
+  },
+  "files": {
+    "config.js": {
+      "atime": 1446086695250
+    },
+    "gulpfile.js": {
+      "atime": 1446086695251
+    },
+    "index.js": {
+      "atime": 1446086695251
+    },
+    "package.json": {
+      "atime": 1446086351974
+    },
+    "doc/logic.md": {
+      "atime": 1446086695252
+    },
+    "example/custom/gulpfile.js": {
+      "atime": 1446086351974
+    },
+    "example/custom/src/test.txt": {
+      "atime": 1446086695252
+    }
+  }
+}

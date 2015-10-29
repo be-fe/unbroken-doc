@@ -1,5 +1,5 @@
 /*@{{
-[ 配置文件 ]{_unbroken_doc_e8ecfc779_}
+@[ 配置文件 ]{_unbroken_doc_e8ecfc779_}
 }}@*/
 module.exports = {
     "projectKey": "default",
