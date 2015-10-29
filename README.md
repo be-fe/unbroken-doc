@@ -57,21 +57,21 @@ on any place of any text file.
 The watcher will detect it and replace it with something like:
 ```
 @{{
-[ SOME DESCRIPTION ]{_projectkey_randomkey}
+@[ SOME DESCRIPTION ]{_projectkey_randomkey}
 }}@
 ```
 
-Note that, if you insert the ``@{}`` pre-marker on a file of a special type, e.g. on a js file, 
+Note that, if you insert the ``@@{}`` pre-marker on a file of a special type, e.g. on a js file, 
 the actual marker will also be enclosed within a multi-line comment automatically. 
 ```
 /*@{{
-[  ]{_projectkey_randomkey}
+@[  ]{_projectkey_randomkey}
 }}@*/
 ```
 
 ## Add a reference to a marker
 
-That's so easy, simply copy the bit `[ SOME DESCRIPTION ]{_projectkey_randomkey}` to anywhere that 
+That's so easy, simply copy the bit `@[ SOME DESCRIPTION ]{_projectkey_randomkey}` to anywhere that 
 you want to have the reference.
 
 In most editor (IDE), you can simply move your cursor at the line of the marker, and press `ctrl+c`

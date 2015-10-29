@@ -4,7 +4,9 @@ var unbrokenDoc = require('./index');
 unbrokenDoc.init('unbroken-doc', {
     addIgnores: [
         /[\\\/]build[\\\/]/,
-        /[\\\/]test-out-of-src\.txt/, 
+        /[\\\/]test-out-of-src\.txt/,
+        /^README.md/,
+        /^README_cn.md/,
     ]
 });
 

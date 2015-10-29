@@ -61,7 +61,7 @@ gulp.task('validate', unbrokenDoc.tasks.validate);
 监视进程就会把它自动赋一个随机的id, 并转换成正式的标记:
 ```
 @{{
-[ 某些注释 ]{_projectkey_randomkey}
+@[ 某些注释 ]{_projectkey_randomkey}
 }}@
 ```
 
@@ -69,12 +69,12 @@ gulp.task('validate', unbrokenDoc.tasks.validate);
 自动包裹在一个多行注释中.
 ```
 /*@{{
-[  ]{_projectkey_randomkey}
+@[  ]{_projectkey_randomkey}
 }}@*/
 ```
 ## 添加标记链接
 
-极其简单, 只要复制和粘贴 `[ SOME DESCRIPTION ]{_projectkey_randomkey}` 到任何地方, 你就算是创建了一个指向 `_projectkey_randomkey`
+极其简单, 只要复制和粘贴 `@[ SOME DESCRIPTION ]{_projectkey_randomkey}` 到任何地方, 你就算是创建了一个指向 `_projectkey_randomkey`
 这个标记的连接了.
 
 在很多的编辑器中, 你可以很快捷的把光标移动到标记这一行, 按下 `ctrl+c` 或 `cmd+c`, 这一行就会被复制到剪切板, 

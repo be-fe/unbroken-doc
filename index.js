@@ -20,7 +20,7 @@ var config = require('./config');
             + '\\s*'
             + '(?:#(\\d+))?'            // #DDD 为标记的权重, 目前没有作用
             + '\\s*'
-            + '\\[([^\\[\\]]*)\\]'      // 前面是 [ /* 标记名称 */ ]
+            + '@\\[([^\\[\\]]*)\\]'      // 前面是 [ /* 标记名称 */ ]
             + '\\{([^{}]+)\\}'          // 后面是 { /* 标记的Key */ }
             + '[^]*?'                   // 标记中, 可以包含简单的内容
             + '\\}\\}@',                // 结束 token
@@ -125,7 +125,7 @@ var config = require('./config');
                             name = ' ' + _.trim(name) + ' ';
                             var key = generateKey();
 
-                            return logic.comment.start + '@{{\n[' + name + ']{' + key + '}\n}}@' + logic.comment.end;
+                            return logic.comment.start + '@{{\n@[' + name + ']{' + key + '}\n}}@' + logic.comment.end;
                         });
 
                         if (newContent != content) {
